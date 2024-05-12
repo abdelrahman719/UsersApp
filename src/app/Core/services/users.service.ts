@@ -11,7 +11,7 @@ export class UsersService {
   getUsers(pageNo:number) {
     let params = new HttpParams;
     params=params.append('page' ,pageNo)
-    return this.http.get('https://reqres.in/api/users')
+    return this.http.get('https://reqres.in/api/users' ,{params})
   }
   getUserDetails(userId:number) {
     return this.http.get(`https://reqres.in/api/users/${userId}`)

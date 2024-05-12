@@ -1,0 +1,35 @@
+.row-card-body{
+
+    .row-card-title
+    {
+        font-size: 2.5rem;
+        font-weight: 700;
+       color: var(--basicColor);
+        
+    }
+    .row-card-text
+    {
+        font-size: 2rem;
+        font-weight: 500;
+        color: rgb(50, 43, 3);
+    }
+
+    &:hover{
+      
+        transform: scale(1.02);
+        transition: all 1s ease-in-out;
+    }
+
+
+}
+.back-img{
+    width: 5rem;
+    height: 5rem;
+    transition: all 1s;
+   
+    
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
