@@ -1,0 +1,58 @@
+<!-- <div class="container mx-auto my-3 ">
+
+    <div class="row justify-content-between">
+        @for(product of productsList; track $index ){
+
+
+        <div class=" col-6 col-md-3  ">
+            <div class="product-card m-2">
+
+                <div class="img-container">
+                    <img [src]="product.ProductImg" class=" rounded  w-100 h-100" [alt]="product.ProductName">
+
+                </div>
+
+                <div class="product-body py-2 px-3">
+                    <h5 class="product-title">#{{product.ProductId}} / {{ product.ProductName }}</h5>
+                    <p class="product-price">Price: {{ product.ProductPrice }} L.E</p>
+                    @if(product.AvailablePieces<10 && product.AvailablePieces != 0){
+
+                        <p class="product-availability danger-color"> {{ product.AvailablePieces }} Pcs <span>( low stock )</span></p>
+                    }
+                    @else if(product.AvailablePieces == 0){
+
+                        <p class="product-availability danger-color">No stock</p>
+                    }
+                    @else {
+                        <p class="product-availability">Stock: {{ product.AvailablePieces }} Pcs</p>
+
+                    }
+                    <button class="btn edit-btn mx-2" (click)="tempId = product.ProductId">Edit Quantity</button>
+
+                    @if(tempId == product.ProductId ){
+
+                        <div >
+                            <div class="input-group my-2">
+                                <input type="number" class="form-control" placeholder="New Quantity" min="0" [(ngModel)]="newQuantity">
+                                <div class="input-group-append">
+                                    <button  class=" btn edit-btn mx-2" type="button" 
+                                    (click)="updateProductQuantity(product.ProductId,newQuantity,product)">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    @if(product.AvailablePieces > 0){
+
+                        <button class="btn primary-btn "  (click)="addToCart(product,1)">Add to cart</button>
+                    }
+                  
+                 
+                </div>
+            </div>
+        </div>
+
+
+
+        }
+    </div>
+</div> -->
